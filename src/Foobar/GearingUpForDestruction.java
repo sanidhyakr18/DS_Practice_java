@@ -2,7 +2,7 @@ package Foobar;
 
 import java.util.Arrays;
 
-public class ThirdChallenge {
+public class GearingUpForDestruction {
     public static void main(String[] args) {
 //        int[] arr1 = {13, 5, 6, 2, 5};
 //        int[] arr2 = {5, 2, 5, 13};

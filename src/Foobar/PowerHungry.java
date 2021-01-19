@@ -2,7 +2,7 @@ package Foobar;
 
 import java.math.BigInteger;
 
-public class SecondChallenge {
+public class PowerHungry {
     public static void main(String[] args) {
 //        int[] arr1 = {-2, -3, 4, -5};
 //        int[] arr1 = {2, 0, 2, 2, 0};

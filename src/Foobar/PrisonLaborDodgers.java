@@ -1,6 +1,6 @@
 package Foobar;
 
-public class FirstChallenge {
+public class PrisonLaborDodgers {
     public static void main(String[] args) {
 //        int[] arr1 = {13, 5, 6, 2, 5};
 //        int[] arr2 = {5, 2, 5, 13};
