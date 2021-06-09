@@ -4,14 +4,15 @@ import java.util.Arrays;
 
 public class MaxAreaOfCake {
     public static void main(String[] args) {
-        int h = 5, w = 4;
-        int[] horizontalCuts = new int[]{1, 2, 4};
-        int[] verticalCuts = new int[]{1, 3};
+        int h = 1000000000, w = 1000000000;
+        int[] horizontalCuts = new int[]{2};
+        int[] verticalCuts = new int[]{2};
         System.out.println(maxArea(h, w, horizontalCuts, verticalCuts));
     }
 
 
     public static int maxArea(int h, int w, int[] horizontalCuts, int[] verticalCuts) {
+        int mod = 1000000007;
         Arrays.sort(horizontalCuts);
         Arrays.sort(verticalCuts);
         int m = horizontalCuts.length;
@@ -28,7 +29,8 @@ public class MaxAreaOfCake {
             maxV = Integer.max(maxV, curr);
         }
         maxV = Integer.max(maxV, w - verticalCuts[n - 1]);
-        return (int) (maxH % (1e9 + 7) * maxV % (1e9 + 7));
+        long ans = ((long) (maxH % mod) * (maxV % mod)) % mod;
+        return (int) ans;
     }
 
 //    To analyse
