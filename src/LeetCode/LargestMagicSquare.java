@@ -24,7 +24,6 @@ public class LargestMagicSquare {
             }
         }
 
-
         int max = 1;
 
         for (int size = 2; size <= Math.min(M, N); size++) {
