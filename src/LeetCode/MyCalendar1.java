@@ -3,6 +3,36 @@ package LeetCode;
 import java.util.ArrayList;
 
 public class MyCalendar1 {
+
+    public static class MyCalendar {
+        public static ArrayList<int[]> list;
+
+        public MyCalendar() {
+            list = new ArrayList<>();
+        }
+
+        public boolean book(int start, int end) {
+            if (list.size() == 0) {
+                list.add(new int[]{start, end});
+                return true;
+            } else if (end <= list.get(0)[0]){
+                list.add(0, new int[]{start, end});
+                return true;
+            } else if (start >= list.get(list.size()-1)[1]){
+                list.add(new int[]{start, end});
+                return true;
+            }
+
+            for (int i = 0; i< list.size() - 1; i++) {
+                if(start >= list.get(i)[1] && end <= list.get(i+1)[0]) {
+                    list.add(i+1, new int[]{start, end});
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
         MyCalendar obj = new MyCalendar();
         System.out.println(obj.book(47, 50));
@@ -18,31 +48,3 @@ public class MyCalendar1 {
     }
 }
 
-class MyCalendar {
-    public static ArrayList<int[]> list;
-
-    public MyCalendar() {
-        list = new ArrayList<>();
-    }
-
-    public boolean book(int start, int end) {
-        if (list.size() == 0) {
-            list.add(new int[]{start, end});
-            return true;
-        } else if (end <= list.get(0)[0]){
-            list.add(0, new int[]{start, end});
-            return true;
-        } else if (start >= list.get(list.size()-1)[1]){
-            list.add(new int[]{start, end});
-            return true;
-        }
-
-        for (int i = 0; i< list.size() - 1; i++) {
-            if(start >= list.get(i)[1] && end <= list.get(i+1)[0]) {
-                list.add(i+1, new int[]{start, end});
-                return true;
-            }
-        }
-        return false;
-    }
-}
