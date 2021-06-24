@@ -1,10 +1,8 @@
 package LeetCode;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 
-public class CanMakeArithmeticProgressionFromSequence {
+public class ArithProgSequence {
     public static void main(String[] args) {
         int[] arr = new int[]{5, 1, 3};
         System.out.println(canMakeArithmeticProgression(arr));

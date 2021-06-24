@@ -4,7 +4,7 @@ import org.w3c.dom.Node;
 
 import java.util.*;
 
-public class NumberOfMatchingSubsequences {
+public class NumOfMatchingSubsequences {
     public static void main(String[] args) {
         String[] words = new String[]{"a","bb","acd","ace"};
         String s = "abcde";
